@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Understanding HTTPS | HTTP &amp; HTTPS Explained
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- Shared header and navigation -->
+  <header>
+   <h1>
+    HTTP and HTTPS Research
+   </h1>
+   <nav>
+    <a href="index.html">
+     Home
+    </a>
+    <a href="http.html">
+     HTTP
+    </a>
+    <a href="https.html">
+     HTTPS
+    </a>
+    <a href="concepts.html">
+     Key Concepts
+    </a>
+    <a href="references.html">
+     References
+    </a>
+    <a href="about.html">
+     About Me
+    </a>
+   </nav>
+  </header>
+  <main>
+   <section>
+    <h1>
+     Understanding HTTPS
+    </h1>
+    <p>
+     HTTPS helps protect information sent between your browser and a website from people who might intercept it.
+    </p>
+   </section>
+   <section>
+    <h2>
+     What makes HTTPS different?
+    </h2>
+    <p>
+     <strong>
+      HTTPS
+     </strong>
+     means Hypertext Transfer Protocol Secure. It uses HTTP over
+     <strong>
+      TLS (Transport Layer Security)
+     </strong>
+     , a protocol that helps encrypt traffic, verify the server&rsquo;s identity through certificates, and detect tampering during transmission.
+    </p>
+    <figure>
+     <img alt="Diagram of browser and server exchanging information through a protected TLS connection" src="images/https-security.svg"/>
+     <figcaption>
+      HTTPS protects data in transit with a TLS connection.
+     </figcaption>
+    </figure>
+   </section>
+   <section>
+    <h2>
+     HTTP vs. HTTPS
+    </h2>
+    <div class="table-wrap">
+     <table>
+      <caption>
+       Differences between HTTP and HTTPS
+      </caption>
+      <thead>
+       <tr>
+        <th>
+         Feature
+        </th>
+        <th>
+         HTTP
+        </th>
+        <th>
+         HTTPS
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>
+         Typical URL prefix
+        </td>
+        <td>
+         http://
+        </td>
+        <td>
+         https://
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Protection in transit
+        </td>
+        <td>
+         No TLS encryption
+        </td>
+        <td>
+         TLS encryption
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Server identity
+        </td>
+        <td>
+         Not authenticated by HTTP itself
+        </td>
+        <td>
+         Usually verified with a digital certificate
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Default port
+        </td>
+        <td>
+         80
+        </td>
+        <td>
+         443
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Common use today
+        </td>
+        <td>
+         Legacy or special internal uses
+        </td>
+        <td>
+         Recommended for public websites
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+   </section>
+   <section>
+    <h2>
+     What happens when HTTPS connects?
+    </h2>
+    <ol>
+     <li>
+      Your browser connects to the site's server.
+     </li>
+     <li>
+      During the TLS handshake, the browser checks the certificate and negotiates connection security.
+     </li>
+     <li>
+      The browser and server establish encryption keys.
+     </li>
+     <li>
+      HTTP requests and responses travel through the encrypted connection.
+     </li>
+    </ol>
+    <p>
+     <strong>
+      Important:
+     </strong>
+     HTTPS protects your connection, but it does not prove a website is trustworthy. Scam and phishing websites can use HTTPS too.
+    </p>
+   </section>
+  </main>
+  <footer>
+   <p>
+    HTTP and HTTPS Research | Eric Leekam
+   </p>
+   <p>
+    <a href="https://ksuweb.github.io/IT3203/">
+     IT 3203 Class Website
+    </a>
+   </p>
+  </footer>
+ </body>
+</html>
+
