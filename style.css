@@ -1,0 +1,92 @@
+/* Basic style for the whole website */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f5f5f5;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Header and menu used on every page */
+header {
+    background-color: #23466c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 12px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 4px 8px;
+}
+
+nav a:hover {
+    background-color: #41678e;
+    text-decoration: underline;
+}
+
+/* Main content area */
+main {
+    background-color: white;
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 25px;
+}
+
+section { margin-bottom: 30px; }
+h1, h2, h3 { color: #23466c; }
+header h1 { color: white; }
+p { margin-top: 8px; }
+a { color: #165b9d; }
+a:hover { color: #092f54; }
+
+/* Put homepage links and definitions in columns */
+.card-grid, .concept-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.info-card, .concept-grid article {
+    border: 1px solid #ccc;
+    background-color: #fafafa;
+    padding: 15px;
+}
+
+.info-card h3, .concept-grid h2 { margin-top: 0; }
+
+/* Images and diagrams */
+img { max-width: 100%; height: auto; }
+figure { margin: 20px 0; text-align: center; }
+figcaption { font-size: 14px; color: #555; }
+
+/* Tables */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+th, td { border: 1px solid #999; padding: 9px; text-align: left; }
+th { background-color: #e0eaf3; }
+
+/* About page */
+.about-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+
+/* Footer */
+footer { text-align: center; padding: 18px; background-color: #e1e1e1; }
+footer p { margin: 4px; }
+
+/* Keep pages readable on small screens */
+@media (max-width: 650px) {
+    main { margin: 10px; padding: 15px; }
+    .card-grid, .concept-grid, .about-grid { grid-template-columns: 1fr; }
+}
