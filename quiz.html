@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz | HTTP & HTTPS Explained</title>
+  <link rel="stylesheet" href="quiz.css">
+  <script src="quiz.js" defer></script>
+</head>
+<body>
+  <!-- Main navigation matches the pages in Milestone 1. -->
+  <header>
+    <h1>HTTP and HTTPS Research</h1>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="http.html">HTTP</a>
+      <a href="https.html">HTTPS</a>
+      <a href="concepts.html">Key Concepts</a>
+      <a href="references.html">References</a>
+      <a href="about.html">About Me</a>
+      <a href="quiz.html" aria-current="page">Quiz</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>HTTP &amp; HTTPS Knowledge Quiz</h2>
+      <p>Test what you learned about how websites communicate and keep information secure. There are 10 questions, and you have 10 minutes to finish.</p>
+      <div class="quiz-details">
+        <span><strong>Questions:</strong> 10</span>
+        <span><strong>Passing score:</strong> 70%</span>
+        <span class="timer" id="timer" role="timer" aria-live="off">Time left: 10:00</span>
+      </div>
+    </section>
+
+    <!-- The form uses text boxes, radio buttons, and checkboxes. -->
+    <form id="quizForm" novalidate>
+      <fieldset>
+        <legend>1. What does HTTP stand for? <small>(Fill in the blank)</small></legend>
+        <label for="q1">Your answer</label>
+        <input id="q1" name="q1" type="text" autocomplete="off" placeholder="Type your answer">
+      </fieldset>
+
+      <fieldset>
+        <legend>2. Which technology is used by HTTPS to secure data in transit?</legend>
+        <label><input type="radio" name="q2" value="a"> FTP</label>
+        <label><input type="radio" name="q2" value="b"> TLS</label>
+        <label><input type="radio" name="q2" value="c"> HTML</label>
+        <label><input type="radio" name="q2" value="d"> CSS</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>3. What is the default port number for HTTPS? <small>(Fill in the blank)</small></legend>
+        <label for="q3">Your answer</label>
+        <input id="q3" name="q3" type="text" autocomplete="off" placeholder="Type a number">
+      </fieldset>
+
+      <fieldset>
+        <legend>4. Which of these is the usual default port for HTTP?</legend>
+        <label><input type="radio" name="q4" value="a"> 21</label>
+        <label><input type="radio" name="q4" value="b"> 22</label>
+        <label><input type="radio" name="q4" value="c"> 80</label>
+        <label><input type="radio" name="q4" value="d"> 443</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>5. Which statements about HTTPS are true? <small>(Select all correct answers)</small></legend>
+        <label><input type="checkbox" name="q5" value="a"> HTTPS uses TLS to help protect information sent over a connection.</label>
+        <label><input type="checkbox" name="q5" value="b"> HTTPS means every website is automatically trustworthy.</label>
+        <label><input type="checkbox" name="q5" value="c"> HTTPS helps protect against someone reading data while it is sent.</label>
+        <label><input type="checkbox" name="q5" value="d"> HTTPS never uses certificates.</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>6. What does a web browser send to a server when it asks for a webpage?</legend>
+        <label><input type="radio" name="q6" value="a"> A request</label>
+        <label><input type="radio" name="q6" value="b"> A certificate authority</label>
+        <label><input type="radio" name="q6" value="c"> A database backup</label>
+        <label><input type="radio" name="q6" value="d"> A DNS zone transfer</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>7. Which HTTP status code usually means “Not Found”?</legend>
+        <label><input type="radio" name="q7" value="a"> 200</label>
+        <label><input type="radio" name="q7" value="b"> 301</label>
+        <label><input type="radio" name="q7" value="c"> 404</label>
+        <label><input type="radio" name="q7" value="d"> 500</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>8. Which HTTP method is commonly used to retrieve a webpage?</legend>
+        <label><input type="radio" name="q8" value="a"> DELETE</label>
+        <label><input type="radio" name="q8" value="b"> GET</label>
+        <label><input type="radio" name="q8" value="c"> PATCH</label>
+        <label><input type="radio" name="q8" value="d"> CONNECT</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>9. What does a digital certificate help a browser check?</legend>
+        <label><input type="radio" name="q9" value="a"> The website's identity</label>
+        <label><input type="radio" name="q9" value="b"> The visitor's screen size</label>
+        <label><input type="radio" name="q9" value="c"> The number of pictures on the page</label>
+        <label><input type="radio" name="q9" value="d"> The speed of the visitor's keyboard</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>10. Which statement best describes the difference between HTTP and HTTPS?</legend>
+        <label><input type="radio" name="q10" value="a"> HTTP always encrypts data, but HTTPS does not.</label>
+        <label><input type="radio" name="q10" value="b"> HTTPS adds a protected connection using TLS.</label>
+        <label><input type="radio" name="q10" value="c"> HTTPS works only on mobile phones.</label>
+        <label><input type="radio" name="q10" value="d"> HTTP and HTTPS are exactly the same.</label>
+      </fieldset>
+
+      <div class="form-buttons">
+        <button type="submit" id="submitButton">Submit Quiz</button>
+        <button type="button" id="resetButton" class="secondary">Reset / Retake Quiz</button>
+      </div>
+    </form>
+
+    <!-- Results are hidden until submission or time runs out. -->
+    <section id="results" class="results" aria-live="polite" hidden>
+      <h2>Your Quiz Results</h2>
+      <p id="passFail"></p>
+      <p id="score"></p>
+      <p id="timeSpent"></p>
+      <h3>Question-by-question results</h3>
+      <div id="questionResults"></div>
+      <button type="button" id="resultsResetButton">Retake Quiz</button>
+    </section>
+
+    <section class="more-reading">
+      <h2>Want to review first?</h2>
+      <p>Go back to the <a href="http.html">HTTP</a>, <a href="https.html">HTTPS</a>, or <a href="concepts.html">Key Concepts</a> pages before trying again.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>HTTP and HTTPS Research | Eric Leekam</p>
+    <p><a href="https://ksuweb.github.io/IT3203/">IT 3203 Class Website</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+/* Styles for the new quiz page. No CSS frameworks are needed. */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #f4f7fb; color: #1d2a3a; line-height: 1.6; }
+header { background: #183653; color: white; padding: 22px 20px; text-align: center; }
+header h1 { font-size: 1.7rem; margin: 0 0 15px; }
+nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 20px; }
+nav a { color: white; text-decoration: none; padding: 5px 7px; border-radius: 4px; }
+nav a:hover, nav a[aria-current="page"] { background: #315776; }
+main { width: min(900px, calc(100% - 32px)); margin: 30px auto; }
+.intro, fieldset, .results, .more-reading { background: white; border: 1px solid #d5e0e9; border-radius: 10px; box-shadow: 0 3px 12px #1836530b; }
+.intro, .results, .more-reading { padding: 23px; margin-bottom: 20px; }
+h2 { margin-top: 0; color: #183653; }
+.quiz-details { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.quiz-details span { padding: 7px 12px; background: #edf3f9; border-radius: 6px; }
+.timer { margin-left: auto; font-weight: bold; color: #135b8d; }
+.timer.warning { background: #ffe7e7; color: #a52323; }
+fieldset { margin: 0 0 16px; padding: 20px 22px; min-width: 0; }
+legend { font-weight: bold; padding: 0 6px; color: #183653; }
+legend small { color: #5c7185; font-weight: normal; }
+fieldset label { display: block; padding: 7px 0; cursor: pointer; }
+fieldset input[type="text"] { display: block; width: 100%; max-width: 450px; padding: 11px; margin-top: 6px; border: 1px solid #9db0c0; border-radius: 5px; font: inherit; }
+fieldset input[type="radio"], fieldset input[type="checkbox"] { margin-right: 8px; accent-color: #165c8c; }
+.form-buttons { display: flex; gap: 12px; flex-wrap: wrap; margin: 18px 0 28px; }
+button { background: #176395; color: white; border: 0; padding: 12px 20px; border-radius: 6px; font: inherit; font-weight: bold; cursor: pointer; }
+button:hover { background: #104e78; }
+button:disabled { background: #9daab5; cursor: not-allowed; }
+button.secondary { background: #e2ebf1; color: #183653; }
+button.secondary:hover { background: #cedde8; }
+.results[hidden] { display: none; }
+.status-pass, .status-fail { font-weight: bold; font-size: 1.25rem; }
+.status-pass { color: #176b3b; }
+.status-fail { color: #a52323; }
+.answer-result { padding: 12px 15px; margin: 11px 0; border-left: 5px solid; border-radius: 4px; }
+.answer-result.correct { background: #e8f7ed; border-color: #23834b; }
+.answer-result.incorrect { background: #fff0ef; border-color: #c64942; }
+.answer-result p { margin: 5px 0 0; }
+a { color: #176395; }
+footer { text-align: center; background: #183653; color: white; padding: 20px; }
+footer a { color: #d9ecff; }
+@media (max-width: 600px) { .timer { margin-left: 0; } fieldset { padding: 17px 14px; } header h1 { font-size: 1.4rem; } }

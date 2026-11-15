@@ -1,0 +1,32 @@
+IT 3203 - Milestone #2: Dynamic Frontend
+HTTP and HTTPS Research
+
+WHAT IS INCLUDED
+- quiz.html: quiz page with 10 questions
+- quiz.css: styles for quiz page
+- quiz.js: countdown, scoring, detailed feedback, reset
+
+HOW TO ADD TO YOUR EXISTING REPOSITORY
+1. Open https://github.com/eleekam/myproject
+2. Upload quiz.html, quiz.css and quiz.js into the root of the main branch (same folder as index.html).
+3. Edit EACH existing HTML page and add this navigation link inside the <nav> element, before </nav>:
+   <a href="quiz.html">Quiz</a>
+4. Optional but recommended: add a new quiz card to index.html in the .card-grid section:
+   <article class="info-card">
+     <h3>Test Your Knowledge</h3>
+     <p>Take the 10-question HTTP and HTTPS quiz.</p>
+     <a href="quiz.html">Start the quiz &rarr;</a>
+   </article>
+5. Commit changes, then visit your published GitHub Pages website.
+6. Test the timer, submit, detailed feedback, reset and navigation.
+
+IMPORTANT
+These files supplement your existing Milestone 1 pages. Do not delete your old pages or images.
+Your repository currently appears not to list style.css, although index.html links to style.css. If the existing pages look unstyled, upload your original style.css or restore it. The quiz uses quiz.css and works separately.
+
+SUBMISSION
+- Submit your actual, working GitHub Pages link.
+- Make a milestone report with screenshots of the quiz, scoring and timer, and explain the requirements.
+- Download your complete repository as ZIP for the source-code submission (do not submit only these three add-on files).
+
+Quiz uses a 70% passing threshold (7/10). This is an implementation choice because the assignment does not specify a passing percentage.
